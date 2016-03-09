@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <title>test canvas draw image</title>
+    <style>
+      .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .box {
+        float: left;
+        width: 7em;
+      }
+
+      .box input {
+        width: 4em;
+      }
+
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clearfix">
+      <div class="box">
+        <label>src width<br><input id="js-src-width" type="number" value="300"></label><br>
+        <label>src height<br><input id="js-src-height" type="number" value="300"></label><br>
+        <label>dest width<br><input id="js-dest-width" type="number" value="300"></label><br>
+        <label>dest height<br><input id="js-dest-height" type="number" value="300"></label>
+      </div>
+      <div class="box">
+        <label>sx<br><input id="js-sx" type="number" value="0"></label><br>
+        <label>sy<br><input id="js-sy" type="number" value="0"></label><br>
+        <label>sw<br><input id="js-sw" type="number" value="300"></label><br>
+        <label>sh<br><input id="js-sh" type="number" value="300"></label>
+      </div>
+      <div class="box">
+        <label>dx<br><input id="js-dx" type="number" value="0"></label><br>
+        <label>dy<br><input id="js-dy" type="number" value="0"></label><br>
+        <label>dw<br><input id="js-dw" type="number" value="300"></label><br>
+        <label>dh<br><input id="js-dh" type="number" value="300"></label>
+      </div>
+    </div>
+
+    <hr>
+
+    <input id="js-draw-image" type="button" value="drawImage">
+
+    <span id="js-error-message" class="error"></span>
+
+    <hr>
+
+    <canvas id="js-src-canvas"></canvas>
+    <canvas id="js-dest-canvas"></canvas>
+
+    <script src="index.js"></script>
+  </body>
+</html>
